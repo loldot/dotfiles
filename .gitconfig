@@ -1,0 +1,15 @@
+[user]
+	email = lrvedeler@gmail.com
+	name = Lorentz Vedeler
+[alias]
+	branch-name = rev-parse --abbrev-ref HEAD
+	stash-all = stash save --include-untracked
+	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ignore-change = update-index --assume-unchanged
+	slog = log -8 --oneline
+	qpr = !git stash save -u && git pull --rebase && git stash pop
+	publish = !git push -u origin $(git branch-name)
+	s = status -s
+	div="!f(){ git log --oneline --graph --decorate --first-parent `git merge-base $1 $2`^..HEAD $1 $2; };f"
+[push]
+	default = simple
