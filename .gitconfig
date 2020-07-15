@@ -1,6 +1,8 @@
 [user]
 	email = lrvedeler@gmail.com
 	name = Lorentz Vedeler
+[core]
+	editor = 'vi'
 [alias]
 	branch-name = rev-parse --abbrev-ref HEAD
 	stash-all = stash save --include-untracked

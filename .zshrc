@@ -4,7 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/loldot/.oh-my-zsh"
 
-/etc/profile.d/use-xinput2.sh
+if [[ -e /etc/profile.d/use-xinput2.sh ]] then
+    /etc/profile.d/use-xinput2.sh
+fi
+
+export VISUAL=code
+export EDITOR="$VISUAL"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
