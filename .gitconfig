@@ -15,3 +15,7 @@
 	div="!f(){ git log --oneline --graph --decorate --first-parent `git merge-base $1 $2`^..HEAD $1 $2; };f"
 [push]
 	default = simple
+[pager]
+	branch = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
