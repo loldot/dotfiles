@@ -1,8 +1,48 @@
 [user]
 	email = lrvedeler@gmail.com
 	name = Lorentz Vedeler
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
 [core]
 	editor = 'vi'
+
+[pager]
+	branch = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
 [alias]
 	branch-name = rev-parse --abbrev-ref HEAD
 	stash-all = stash save --include-untracked
@@ -13,9 +53,3 @@
 	publish = !git push -u origin $(git branch-name)
 	s = status -s
 	div="!f(){ git log --oneline --graph --decorate --first-parent `git merge-base $1 $2`^..HEAD $1 $2; };f"
-[push]
-	default = simple
-[pager]
-	branch = false
-[url "git@github.com:"]
-	insteadOf = https://github.com/
